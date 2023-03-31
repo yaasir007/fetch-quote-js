@@ -5,8 +5,36 @@
   padding: 0;
   margin: 0;
   font-family: 'Shadows Into Light', cursive;
+  background-color: lightslategrey;
+  color: white;
 }
 
 button {
   all: unset;
+}
+
+.quote-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.quote__content {
+  width: 70%;
+  font-size: 2rem;
+}
+
+.quote__btn {
+  padding: .8rem 1.5rem;
+  background-color: lightseagreen;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all .1s linear;
+}
+
+.quote__btn:active {
+  transform: scale(0.9);
 }
