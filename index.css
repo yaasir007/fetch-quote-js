@@ -19,12 +19,16 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 5rem;
+  gap: 3rem;
 }
 
 .quote__content {
   width: 70%;
-  font-size: 2rem;
+  font-size: 1.8rem;
+}
+
+.quote__author {
+  font-size: 1.6rem;
 }
 
 .quote__btn {
