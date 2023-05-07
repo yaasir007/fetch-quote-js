@@ -5,10 +5,11 @@ const quoteBtn = document.querySelector('.quote__btn');
 quoteContent.innerText = "Loading...";
 
 const fetchQuote = () => {
-  fetch("https://api.quotable.io/random")
+  fetch("https://type.fit/api/quotes")
   .then(response => response.json())
   .then((data) => {
-    quoteContent.innerText = data.content;
+    quoteContent.innerText = data[0];
+    console.log(data[0]);
     quoteAuthor.innerText = data.author;
   })
   .catch((error) => {
