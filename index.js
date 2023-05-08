@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
   fetchQuote();
 })
 
-let count = 2;
+let count = 1;
 quoteBtn.addEventListener('click', () => {
   fetch("https://type.fit/api/quotes")
   .then(response => response.json())
@@ -33,6 +33,6 @@ quoteBtn.addEventListener('click', () => {
     quoteContent.innerText = "Error Found While Loading";
     quoteAuthor.innerText = " ";
   })
-  
+
   count++;
 })
