@@ -8,9 +8,8 @@ const fetchQuote = () => {
   fetch("https://type.fit/api/quotes")
   .then(response => response.json())
   .then((data) => {
-    quoteContent.innerText = data[0];
-    console.log(data[0]);
-    quoteAuthor.innerText = data.author;
+    quoteContent.innerText = data[0].text;
+    quoteAuthor.innerText = data[0].author;
   })
   .catch((error) => {
     quoteContent.innerText = "Error Found While Loading";
@@ -22,6 +21,18 @@ window.addEventListener('DOMContentLoaded', () => {
   fetchQuote();
 })
 
+let count = 2;
 quoteBtn.addEventListener('click', () => {
-  fetchQuote();
+  fetch("https://type.fit/api/quotes")
+  .then(response => response.json())
+  .then((data) => {
+    quoteContent.innerText = data[count].text;
+    quoteAuthor.innerText = data[count].author;
+  })
+  .catch((error) => {
+    quoteContent.innerText = "Error Found While Loading";
+    quoteAuthor.innerText = " ";
+  })
+  
+  count++;
 })
